@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="jquery-3.6.4.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 style="color:red" id="helloworld">
+            hello world
+        </h1>
+        <button id="button">click me</button>
+    </body>
+    <script>
+        const button = document.getElementById("button")
+        const hlworld = document.getElementById("helloworld")
+        button.onclick = function (){
+            hlworld.setAttribute("style","color: green; background-color:red")
+            const pString = document.createElement("p")
+            console.log(pString.innerHTML)
+            pString.innerHTML= "đã click"
+            console.log("sau khi set inner html", pString.innerHTML)
+            document.body.appendChild(pString)
+        }
+    </script>
+    <style>
+    </style>
+</html>
